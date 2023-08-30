@@ -83,7 +83,7 @@ public class InterazPerros extends javax.swing.JFrame {
                 AgregarPerrosActionPerformed(evt);
             }
         });
-        getContentPane().add(AgregarPerros, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 380, 150, 40));
+        getContentPane().add(AgregarPerros, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 380, 170, 40));
 
         cantPerros.setBackground(new java.awt.Color(235, 222, 194));
         cantPerros.addActionListener(new java.awt.event.ActionListener() {
@@ -147,18 +147,25 @@ public class InterazPerros extends javax.swing.JFrame {
         
         numPerros=Integer.parseInt(cantPerros.getText());
         for (int i = 0; i < numPerros; i++) {
+            boolean ok=false;
             int tipoPerro=Integer.parseInt(JOptionPane.showInputDialog("que tipo es tu perro:\n1.pequeño\n2.mediano\n3.grande "));
             if(tipoPerro==1){
                 pequeños++;
+                ok=true;
             }else if(tipoPerro==2){
                 medianos++;
+                ok=true;
             }else if (tipoPerro==3) {
                 grandes++;
+                ok=true;
             }else{
                 JOptionPane.showMessageDialog(null, "ERROR\nese tipo de perro no existe");
                 i--;
             }
-            JOptionPane.showMessageDialog(null,"tu perro ha sido agregado con exito");
+            if(ok){
+                 JOptionPane.showMessageDialog(null,"tu perro ha sido agregado con exito");
+            }
+           
         }
     }//GEN-LAST:event_AgregarPerrosActionPerformed
 
