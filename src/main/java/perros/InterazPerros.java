@@ -4,8 +4,9 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author USER
+ * @author Daniel esteban rivera gomez
  */
+//programacion II
 public class InterazPerros extends javax.swing.JFrame {
         
         final int precioPeq=3000;
@@ -15,7 +16,7 @@ public class InterazPerros extends javax.swing.JFrame {
         int numPerros=0;
         int horas=0;
                 
-        int pequeños=0;
+        int pequenos=0;
         int medianos=0;
         int grandes=0;
         int costo=0;
@@ -38,9 +39,9 @@ public class InterazPerros extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        cheems = new javax.swing.JLabel();
+        lema = new javax.swing.JLabel();
+        perrosAgregar = new javax.swing.JLabel();
         AgregarPerros = new javax.swing.JButton();
         cantPerros = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -59,20 +60,20 @@ public class InterazPerros extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 40)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(102, 68, 0));
-        jLabel1.setText("Cheems pet");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, -1, -1));
+        cheems.setFont(new java.awt.Font("Monospaced", 1, 40)); // NOI18N
+        cheems.setForeground(new java.awt.Color(102, 68, 0));
+        cheems.setText("Cheems pet");
+        getContentPane().add(cheems, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Monospaced", 0, 20)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 68, 0));
-        jLabel2.setText("Los mejores paseos de tu amigo canino");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, -1, -1));
+        lema.setFont(new java.awt.Font("Monospaced", 0, 20)); // NOI18N
+        lema.setForeground(new java.awt.Color(102, 68, 0));
+        lema.setText("Los mejores paseos de tu amigo canino");
+        getContentPane().add(lema, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(102, 68, 0));
-        jLabel3.setText("¿cuantos perros desea que paseemos?");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 340, -1, -1));
+        perrosAgregar.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        perrosAgregar.setForeground(new java.awt.Color(102, 68, 0));
+        perrosAgregar.setText("¿cuantos perros desea que paseemos?");
+        getContentPane().add(perrosAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 340, -1, -1));
 
         AgregarPerros.setBackground(new java.awt.Color(159, 111, 16));
         AgregarPerros.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
@@ -150,7 +151,7 @@ public class InterazPerros extends javax.swing.JFrame {
             boolean ok=false;
             int tipoPerro=Integer.parseInt(JOptionPane.showInputDialog("que tipo es tu perro:\n1.pequeño\n2.mediano\n3.grande "));
             if(tipoPerro==1){
-                pequeños++;
+                pequenos++;
                 ok=true;
             }else if(tipoPerro==2){
                 medianos++;
@@ -178,7 +179,7 @@ public class InterazPerros extends javax.swing.JFrame {
         horas=Integer.parseInt(CantHoras.getText());
         cantPerros.setText("");
         CantHoras.setText("");
-        costo=(grandes*horas*precioGran)+(medianos*horas*precioMed)+(pequeños*horas*precioPeq);
+        costo=(grandes*horas*precioGran)+(medianos*horas*precioMed)+(pequenos*horas*precioPeq);
         if(numPerros>1){
             costo=(int)(costo-(costo*0.1));
         }
@@ -226,15 +227,15 @@ public class InterazPerros extends javax.swing.JFrame {
     private javax.swing.JLabel Cheems;
     private javax.swing.JLabel JLabelFondo;
     private javax.swing.JTextField cantPerros;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel cheems;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel lema;
+    private javax.swing.JLabel perrosAgregar;
     private javax.swing.JButton registrarPerro;
     // End of variables declaration//GEN-END:variables
 }
